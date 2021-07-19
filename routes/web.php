@@ -3,6 +3,7 @@
 use App\Http\Controllers\SociosController;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //Route::get('/socios', [App\Http\Controllers\SociosController::class, 'index'])->name('socios');
 //Route::get('/socios/create', [App\Http\Controllers\SociosController::class, 'create'])->name('socios.create');
 
-Route::get('socios', Socios::class)->name('socios');
+Route::get('socios', [SociosController::class, 'index'])->name('socios');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

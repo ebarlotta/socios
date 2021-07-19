@@ -21,5 +21,4 @@
     <label for="url">Foto</label>
     <input type="file" name=url>
 
-    <button onclick="{{ route('socios.create') }}">Guardar</button>
 </div>

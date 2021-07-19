@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSociosTable extends Migration
+class CreateEstadosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,9 @@ class CreateSociosTable extends Migration
      */
     public function up()
     {
-        Schema::create('socios', function (Blueprint $table) {
+        Schema::create('estados', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->integer('dni');
-            $table->text('direccion');
-            $table->date('nacimiento');
-            $table->string('email');
-            $table->string('telefono');
-            $table->text('url');
+            $table->text('name');
             $table->timestamps();
         });
     }
@@ -33,6 +27,6 @@ class CreateSociosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('socios');
+        Schema::dropIfExists('estados');
     }
 }
